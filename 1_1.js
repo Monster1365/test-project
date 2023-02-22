@@ -20,6 +20,19 @@ document.addEventListener("DOMContentLoaded",
                 nameEditButton.style.display = "inline"
             }
         )
+        const para = document.querySelector('p');
+
+        para.addEventListener('click', updateName);
+
+        function updateName() {
+         const name = prompt('Enter a new name');
+        para.textContent = `Player 1: ${name}`;
+        }
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+
+        ctx.fillStyle = 'green';
+        ctx.fillRect(10, 10, 150, 100);
 
     }
 )
